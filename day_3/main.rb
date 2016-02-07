@@ -1,5 +1,5 @@
-require './grid.rb'
+require './santa.rb'
 
-grid = Grid.new
-File.read('./input').each_char { |char| grid.next_step char }
-puts grid.sum
+santa = Santa.new
+File.read('./input').each_char { |char| santa.go_to_next_house char }
+puts santa.houses.count
